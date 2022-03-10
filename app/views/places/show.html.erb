@@ -1,8 +1,9 @@
-
-
 <h1><%= @place.name %></h1>
 
-<h2>Posts</h2>
+<p>
+  <a href="/posts/new?place_id=<%= @place.id %>">New Post</a>
+</p>
+
 <% if @current_user %>
 <% for post in @place.posts %>
 <div class="col-md-3 col-sm-6">
@@ -19,9 +20,7 @@
 
 <% end %>
 <% end %>
-<p>
-  <a href="/posts/new?place_id=<%= @place.id %>">New Post</a>
-</p>
+
 
 <p>
   <a href="/places">Back to All Places</a>
