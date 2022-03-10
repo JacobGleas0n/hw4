@@ -1,4 +1,4 @@
-<h1>New User Account</h1>
+<h1>Create a New Travel User Account</h1>
 
 <%= form_with model: @user do |form| %>
   <p>
@@ -11,7 +11,7 @@
   </p>
   <p>
     <%= form.label "password" %>
-    <%= form.text_field "password" %>
+    <%= form.password_field "password" %>
   </p>
   <p>
     <%= form.submit "Sign up" %>
