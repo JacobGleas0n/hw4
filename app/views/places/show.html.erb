@@ -3,25 +3,22 @@
 <p>
   <a class="btn btn-success" href="/posts/new?place_id=<%= @place.id %>" role="button">New Post</a> 
 </p>
-
 <div class="row">
 <% for post in @place.posts %>
-<div class="col-md-6">
-<% if post.user %>
-    
-  
-  <p><%= post.title %></p>
+<div class="col-md-4 col-sm-6">
+ 
+  <h4><%= post.title %></h4>
   <p><%= post.posted_on %></p>
 
   <% if post.uploaded_image.attached? %>
-  <img src="<%= url_for(post.uploaded_image) %>" class="image-fluid">
+  <img src="<%= url_for(post.uploaded_image) %>" class="image-fluid w-100">
   <% else %>
-  <img src="<%= post.image %>" class="image-fluid">
+  <img src="<%= post.image %>" class="image-fluid w-100">
   <% end %>
-
+    <div class="col text-center">
   <p><%= post.description %></p>
-
-<% else %>
+</div>
+</div>
 <% end %>
 <% end %>
-<% end %>
+</div>
