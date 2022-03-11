@@ -7,13 +7,8 @@
 <div class="row">
 <% for post in @place.posts %>
 <div class="col-md-6">
-        <h4>
-        <% if post.user %>
-          <% post.user.username%>
-        <% else %>
-          User not found
-        <% end %>
-        </h4>
+<% if post.user %>
+    
   
   <p><%= post.title %></p>
   <p><%= post.posted_on %></p>
@@ -26,5 +21,7 @@
 
   <p><%= post.description %></p>
 
+<% else %>
+<% end %>
 <% end %>
 <% end %>
