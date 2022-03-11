@@ -1,7 +1,9 @@
+<% if @current_user %>
+
 <h1>Places</h1>
 
 <p>
-  <a href="/places/new">New Place</a>
+ <a class="btn btn-success" href="/places/new" role="button">New Place</a> 
 </p>
 
 <ul>
@@ -10,3 +12,7 @@
   <% end %>
 </ul>
 
+<% else %>
+
+<h1> Please login or signup to see the Travel Log!  </h1>
+<% end %>
